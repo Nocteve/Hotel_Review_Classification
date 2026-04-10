@@ -1,9 +1,8 @@
-import logging
-
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
-
-# 替换print语句
-logger.info(f'vocab_size:{len(word_to_num)}')
-if size % 500 == 0:
-    logger.info(f'prepare:{size}')
+def get_sample(self, sam_size=1, _except=[]):
+    except_set = set(_except)
+    output = []
+    while len(output) < sam_size:
+        x = self.sampler.sample_n(1)
+        if int(x[0]) not in except_set:
+            output.append(int(x[0]))
+    return output
