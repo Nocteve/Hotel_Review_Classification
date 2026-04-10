@@ -1,9 +1,9 @@
-import argparse
+import logging
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--data_path', type=str, default='ChnSentiCorp_htl_all.csv')
-parser.add_argument('--vocab_path', type=str, default='./data.json')
-parser.add_argument('--freq_path', type=str, default='./f.json')
-args = parser.parse_args()
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
-# 在类中使用args.data_path等
+# 替换print语句
+logger.info(f'vocab_size:{len(word_to_num)}')
+if size % 500 == 0:
+    logger.info(f'prepare:{size}')
