@@ -1,1 +1,1 @@
-建议使用argparse或配置文件管理这些参数。
+在训练循环前添加：rnn_model.train()；在评估前添加：rnn_model.eval()。
