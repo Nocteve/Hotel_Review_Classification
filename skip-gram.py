@@ -1,1 +1,1 @@
-在while循环中添加最大迭代次数限制，例如：max_retries = sam_size * 10; retry_count = 0; while len(output) < sam_size and retry_count < max_retries: ... retry_count += 1
+优化负采样逻辑，减少重复调用。
